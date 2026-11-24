@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ef">
+  <meta name="description" content="留白印 MatInk 的隐私政策、照片与定位信息处理说明、购买恢复与技术支持。">
+  <title>隐私政策与技术支持 · 留白印 MatInk</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f4ef;
+      --surface: #fffdfa;
+      --ink: #22211e;
+      --muted: #57534c;
+      --line: #dcd5cb;
+      --link: #344d62;
+      --serif: "New York", "Songti SC", "Noto Serif CJK SC", Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", "Segoe UI", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.75 var(--sans);
+    }
+
+    a { color: var(--link); text-underline-offset: 0.19em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+    [id] { scroll-margin-top: 1.25rem; }
+
+    .frame { width: min(calc(100% - 2.5rem), 64rem); margin-inline: auto; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem 2rem;
+      padding-block: 0.85rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--ink);
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 1.85rem;
+      height: 1.85rem;
+      position: relative;
+      border: 1px solid currentColor;
+      border-radius: 0.25rem;
+    }
+
+    .brand-mark::before, .brand-mark::after { position: absolute; content: ""; }
+    .brand-mark::before {
+      inset: 0.32rem 0.32rem 0.59rem;
+      border: 1px solid currentColor;
+    }
+    .brand-mark::after {
+      bottom: 0.31rem;
+      left: 0.32rem;
+      width: 0.55rem;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .nav, .jump-links { display: flex; align-items: center; flex-wrap: wrap; gap: 0.2rem 1.2rem; }
+    .nav a, .jump-links a { display: inline-block; padding-block: 0.35rem; }
+    .nav { font-size: 0.92rem; }
+
+    main.frame { max-width: 47rem; padding-block: clamp(2.5rem, 7vw, 5rem); }
+    .language + .language { margin-top: 3.75rem; }
+    .intro { margin-bottom: 2rem; }
+    .language + .language .intro { padding-top: 1.8rem; border-top: 1px solid var(--line); }
+    h1, h2 { font-family: var(--serif); font-weight: 700; line-height: 1.2; }
+    h1 { margin: 0 0 0.8rem; font-size: clamp(2rem, 5.5vw, 3.65rem); letter-spacing: -0.035em; }
+    .intro h2 { margin: 0 0 0.8rem; font-size: clamp(1.8rem, 4vw, 2.65rem); }
+    .date { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    .jump-links { margin-top: 0.65rem; font-size: 0.92rem; }
+    .sheet {
+      padding: clamp(1.15rem, 4vw, 2.4rem);
+      border: 1px solid var(--line);
+      border-radius: 0.5rem;
+      background: var(--surface);
+    }
+
+    .sheet + .sheet { margin-top: 1.1rem; }
+    .sheet > h2, .sheet > h3 { margin: 0 0 0.85rem; font: 700 clamp(1.55rem, 3vw, 2.05rem)/1.25 var(--serif); }
+    .sheet > h3:not([id]), .sheet > h4 { margin: 1.35rem 0 0.3rem; font: 700 1.05rem/1.5 var(--sans); }
+    p { margin: 0 0 0.7rem; }
+    p:last-child, ul:last-child, ol:last-child { margin-bottom: 0; }
+    ul, ol { margin: 0 0 0.7rem; padding-inline-start: 1.4rem; }
+    li + li { margin-top: 0.25rem; }
+
+    .contact {
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      border-inline-start: 3px solid var(--link);
+      background: #efede6;
+      overflow-wrap: anywhere;
+    }
+
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; padding-block: 0.6rem; font-weight: 650; }
+    details p { margin: 0 0 0.8rem; }
+    .site-footer { border-top: 1px solid var(--line); padding-block: 1rem; color: var(--muted); font-size: 0.9rem; }
+
+    @media (max-width: 36rem) {
+      .frame { width: calc(100% - 1.5rem); }
+      .header-row { gap: 0.2rem 0.9rem; }
+      .nav { gap: 0.2rem 0.85rem; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="frame header-row">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>留白印 MatInk</a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#privacy">隐私政策</a>
+        <a href="#support">技术支持</a>
+        <a href="#english" lang="en">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="frame">
+    <div class="language">
+      <div class="intro">
+        <h1>隐私政策与技术支持</h1>
+        <p class="date">最后更新于 <time datetime="2026-11-24">2026 年 11 月 24 日</time></p>
+      </div>
+
+      <section class="sheet" id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">隐私政策</h2>
+        <p>本政策适用于 iPhone 和 iPad 上的留白印 MatInk。你无需注册留白印账号即可使用 App。App 在设备上处理照片，开发者不通过 App 收集个人数据，也不使用广告跟踪或第三方分析 SDK。</p>
+
+        <h3>照片、拍摄参数与相册权限</h3>
+        <p>App 通过系统照片选择器读取你选中的照片，并在设备上解析其中的拍摄信息，例如机型、镜头、曝光参数、拍摄时间和照片已有的 GPS 坐标。这些数据用于预览、编辑和导出。App 不请求设备定位权限，也不会将原图、成片或拍摄信息上传到开发者服务器。</p>
+        <p>选择「存入相册」时，App 会使用系统的仅添加照片权限。你可以在设备的「设置」中管理或撤销权限。导出的文件可能保留机型和拍摄时间等拍摄元数据，但不会写入 GPS 元数据。如果你选用了「地点」字段，坐标或地点文字仍可能显示在成片上。分享前可关闭该字段并检查预览。</p>
+        <p>通过系统分享菜单发送图片时，你选择的接收者或服务会收到该文件。相册或设备备份的同步由你的系统和 iCloud 设置管理。</p>
+
+        <h3>本机数据的保存与删除</h3>
+        <p>为完成编辑和导出，App 会在设备上建立临时副本，并在启动时清理过期的临时文件。语言、导出偏好、默认署名、预设及导入的自定义标志会保存在 App 的本地数据中，供下次使用。你可以清空默认署名、删除自定义预设和标志，或删除 App 以移除其本地容器中的数据。已保存到相册或分享出去的图片由你在对应位置管理。</p>
+        <p>为计算免费版的每月导出额度，App 会在设备钥匙串中保存每月导出计数和额度计算所需的时间记录。计数记录最多保留最近 12 个月份条目。该记录不通过 iCloud 钥匙串同步，卸载后仍可能在同一设备上保留。</p>
+
+        <h3>App Store 购买</h3>
+        <p>MatInk Pro 的购买、恢复购买和退款由 Apple 的 App Store 处理。留白印使用 StoreKit 验证交易和判断 Pro 权益，不接收你的支付卡信息或 Apple 账户密码。<a href="https://www.apple.com.cn/legal/privacy/data/zh-cn/app-store/">Apple 的 App Store 隐私说明</a></p>
+
+        <h3>支持邮件与隐私请求</h3>
+        <p>如果你主动联系技术支持，开发者会使用你的邮箱地址、邮件正文和你选择提供的附件处理请求及必要的跟进。相关信息在处理和跟进所需期间保留，法律另有要求的除外。你可以通过<a href="#support-contact">技术支持联系方式</a>询问隐私问题，或请求查阅、更正和删除你提供的支持资料。</p>
+
+        <h3>政策更新</h3>
+        <p>如果 App 的数据处理方式发生变化，我们会在这页更新说明和日期。</p>
+      </section>
+
+      <section class="sheet" id="support" aria-labelledby="support-title">
+        <h2 id="support-title">技术支持</h2>
+        <div class="contact" id="support-contact">
+          <p><strong>联系邮箱</strong> <a href="mailto:hashcode@outlook.com">hashcode@outlook.com</a></p>
+          <p>可以通过邮件反馈使用问题、提交功能建议或提出隐私请求。</p>
+        </div>
+
+        <h3>反馈问题时请附上</h3>
+        <ul>
+          <li>设备型号、iOS 或 iPadOS 版本，以及留白印版本号。版本号可在 App 的「设置 → 关于」查看。</li>
+          <li>出现问题前的操作步骤、预期结果和实际提示。如果问题和照片有关，可以附上不含个人信息的样图。</li>
+        </ul>
+        <p>请勿发送 Apple 账户密码、验证码或完整支付信息。分享截图前，请遮盖私人内容。</p>
+
+        <h3>常见问题</h3>
+        <details>
+          <summary>照片无法导入</summary>
+          <p>可以先在系统「照片」中打开原图，确认图片已可在设备上读取。若原图只在 iCloud，等系统下载完成后再导入。RAW 文件可先转换为 JPEG 或 HEIF。</p>
+        </details>
+        <details>
+          <summary>照片没有显示相机参数</summary>
+          <p>有些截图、社交平台下载图或经过处理的照片缺少 EXIF 信息。可以尝试导入原图，或在编辑器里手动补填所需字段。</p>
+        </details>
+        <details>
+          <summary>成片无法保存到相册</summary>
+          <p>请在设备「设置」里找到留白印，允许 App 添加照片，并检查设备储存空间。也可以在导出时使用系统分享菜单，将成片存到「文件」或其他支持的位置。</p>
+        </details>
+        <details>
+          <summary>已经购买 Pro，或需要申请退款</summary>
+          <p>请用购买时的 Apple 账户登录 App Store，在留白印的「设置 → Pro」中点「恢复购买」。如需申请退款或核对扣款，请通过 Apple 处理。<a href="https://support.apple.com/zh-cn/118223">Apple 退款申请说明</a></p>
+        </details>
+      </section>
+    </div>
+
+    <div class="language" id="english" lang="en">
+      <div class="intro">
+        <h2>Privacy Policy and Support</h2>
+        <p class="date">Last updated <time datetime="2026-11-24">November 24, 2026</time></p>
+        <nav class="jump-links" aria-label="English sections">
+          <a href="#privacy-en">Privacy Policy</a>
+          <a href="#support-en">Support</a>
+          <a href="#top" lang="zh-Hans">简体中文</a>
+        </nav>
+      </div>
+
+      <section class="sheet" id="privacy-en" aria-labelledby="privacy-en-title">
+        <h3 id="privacy-en-title">Privacy Policy</h3>
+        <p>This policy applies to MatInk for iPhone and iPad. You can use MatInk without creating an account. The app processes photos on your device. The developer does not collect personal data through the app or use advertising trackers or third-party analytics SDKs.</p>
+
+        <h4>Photos, camera metadata, and permissions</h4>
+        <p>MatInk uses the system photo picker to access the photos you select. The app reads available metadata on your device, including camera and lens details, exposure settings, capture time, and GPS coordinates already in the image. It uses this information to preview, edit, and export photos. MatInk does not request device location access or upload original photos, exports, or capture information to the developer’s servers.</p>
+        <p>When you choose to save an export to Photos, MatInk uses the system’s add-only photo permission. You can change or revoke that permission in your device settings. Exports may retain camera and capture-time metadata. MatInk omits GPS metadata from exported files. If you include the Location field in your frame, coordinates or location text can still appear on the image. You can turn that field off and check the preview before sharing.</p>
+        <p>When you share an export using the system share sheet, the recipient or service you choose receives the file. Syncing Photos or device backups follows your system and iCloud settings.</p>
+
+        <h4>Local storage, retention, and deletion</h4>
+        <p>MatInk creates temporary copies on your device for editing and export and cleans up stale temporary files when it starts. It stores your language, export preferences, default signature, presets, and imported logos in its local data so you can use them again. You can clear the default signature, delete custom presets and logos, or delete the app to remove its local container data. Manage photos saved to Photos or shared elsewhere through the relevant app or service.</p>
+        <p>To track the free tier’s monthly export allowance, MatInk stores monthly export counts and the time information needed to calculate the allowance in the device Keychain. The record keeps up to 12 monthly count entries. It does not sync through iCloud Keychain and may remain on the same device after uninstalling MatInk.</p>
+
+        <h4>App Store purchases</h4>
+        <p>Apple’s App Store processes purchases, restorations, and refunds for MatInk Pro. MatInk uses StoreKit to verify purchases and determine access to Pro. The app does not receive your payment card details or Apple Account password. <a href="https://www.apple.com/legal/privacy/data/en/app-store/">Apple’s App Store privacy information</a></p>
+
+        <h4>Support email and privacy requests</h4>
+        <p>If you contact support, the developer uses your email address, message, and any attachments you choose to share to respond and follow up as needed. Support correspondence is kept for as long as needed to handle the request and follow-up, or as required by law. You can <a href="#support-en-contact">contact support</a> with questions about privacy or to request access to, correction of, or deletion of information you provided.</p>
+
+        <h4>Policy updates</h4>
+        <p>If MatInk changes how it handles data, we will update this page and its date.</p>
+      </section>
+
+      <section class="sheet" id="support-en" aria-labelledby="support-en-title">
+        <h3 id="support-en-title">Technical Support</h3>
+        <div class="contact" id="support-en-contact">
+          <p><strong>Email</strong> <a href="mailto:hashcode@outlook.com">hashcode@outlook.com</a></p>
+          <p>Email us for help, feature requests, or privacy questions.</p>
+        </div>
+
+        <h4>What to include in a report</h4>
+        <ul>
+          <li>Your device model, iOS or iPadOS version, and MatInk version. Find the app version under Settings → About.</li>
+          <li>Steps to reproduce the issue, what you expected, and what happened. For image-related issues, a sample without personal information can help.</li>
+        </ul>
+        <p>Keep passwords, verification codes, and full payment details out of your message. Hide private information before sharing screenshots.</p>
+
+        <h4>Frequently asked questions</h4>
+        <details>
+          <summary>A photo won’t import</summary>
+          <p>Open the original in Photos and check that your device can read it. If the original is stored in iCloud, wait for Photos to download it and try again. Convert RAW files to JPEG or HEIF before importing.</p>
+        </details>
+        <details>
+          <summary>Camera details are missing</summary>
+          <p>Screenshots, images downloaded from social media, and some edited files may not include EXIF metadata. Try importing the original, or enter missing fields in the editor.</p>
+        </details>
+        <details>
+          <summary>An export won’t save to Photos</summary>
+          <p>In your device settings, check that MatInk can add photos and that your device has free storage. You can also use the system share sheet at export to save to Files or another supported destination.</p>
+        </details>
+        <details>
+          <summary>Restoring Pro or requesting a refund</summary>
+          <p>Sign in to the App Store with the Apple Account you used to purchase Pro. In MatInk, open Settings → Pro and select Restore Purchases. For refunds and billing inquiries, contact Apple. <a href="https://support.apple.com/en-us/118223">Apple’s refund instructions</a></p>
+        </details>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="frame">留白印 MatInk</div>
+  </footer>
+</body>
+</html>
